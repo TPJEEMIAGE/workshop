@@ -1,51 +1,57 @@
 package org.workshop.entities.character;
 
 import java.io.Serializable;
+
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class AttributeId implements Serializable{
-	
+public class CapacityId implements Serializable{
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -5469032948030355325L;
-	
+	private static final long serialVersionUID = -2229525512109448196L;
+
 	private Long charId;
-	private Long AttrId;
 	
+	private Long capacityTypeId;
+
 	/**
 	 * @return the charId
 	 */
 	public Long getCharId() {
 		return charId;
 	}
+
 	/**
 	 * @param charId the charId to set
 	 */
 	public void setCharId(Long charId) {
 		this.charId = charId;
 	}
+
 	/**
-	 * @return the attrId
+	 * @return the capacityTypeId
 	 */
-	public Long getAttrId() {
-		return AttrId;
+	public Long getCapacityTypeId() {
+		return capacityTypeId;
 	}
-	/**
-	 * @param attrId the attrId to set
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
 	 */
-	public void setAttrId(Long attrId) {
-		AttrId = attrId;
-	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((AttrId == null) ? 0 : AttrId.hashCode());
+		result = prime * result + ((capacityTypeId == null) ? 0 : capacityTypeId.hashCode());
 		result = prime * result + ((charId == null) ? 0 : charId.hashCode());
 		return result;
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -54,11 +60,11 @@ public class AttributeId implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		AttributeId other = (AttributeId) obj;
-		if (AttrId == null) {
-			if (other.AttrId != null)
+		CapacityId other = (CapacityId) obj;
+		if (capacityTypeId == null) {
+			if (other.capacityTypeId != null)
 				return false;
-		} else if (!AttrId.equals(other.AttrId))
+		} else if (!capacityTypeId.equals(other.capacityTypeId))
 			return false;
 		if (charId == null) {
 			if (other.charId != null)
@@ -67,4 +73,12 @@ public class AttributeId implements Serializable{
 			return false;
 		return true;
 	}
+
+	/**
+	 * @param capacityTypeId the capacityTypeId to set
+	 */
+	public void setCapacityTypeId(Long capacityTypeId) {
+		this.capacityTypeId = capacityTypeId;
+	}
+	
 }

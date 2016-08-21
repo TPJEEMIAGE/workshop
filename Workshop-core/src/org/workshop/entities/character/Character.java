@@ -5,10 +5,14 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlRootElement;
 
 import org.workshop.entities.Element;
 
 @Entity
+@XmlRootElement
 public class Character {
 	
 	@Id
@@ -23,26 +27,33 @@ public class Character {
 	
 	private Element secondaryElement;
 	
+	@OneToMany
+	@JoinColumn(name="charId")
 	private List<Attribute> attributes;
 	
 	private Integer attributePointsRemaining;
 	
+	@OneToMany
 	private List<WeaponSkill> weaponSkills;
 	
 	private Integer weaponSkillsPointRemaining;
 	
+	@OneToMany
 	private List<KnowledgeSkill> knowledgeSkills;
 	
 	private Integer knowledgeSkillsPointRemaining;
 	
+	@OneToMany
 	private List<CompetencySkill> competencySkills;
 	
 	private Integer competencySkillsPointRemaining;
 	
+	@OneToMany
 	private List<HabilitySkill> habilitySkills;
 	
 	private Integer habilitySkillsPointRemaining;
 	
+	@OneToMany
 	private List<Job> jobs;
 	
 	private Integer jobsSkillsPointRemaining;
@@ -53,16 +64,22 @@ public class Character {
 	
 	private Integer currentMv;
 	
+	@OneToMany
 	private List<Buff> buffs;
 	
+	@OneToMany
 	private List<Debuff> debuffs;
 	
+	@OneToMany
 	private List<Resistance> resistances;
 	
+	@OneToMany
 	private List<Objet> inventory;
 	
+	@OneToMany
 	private List<ActiveCapacity> actives;
 	
+	@OneToMany
 	private List<PassiveCapacity> passives;
 
 	/**

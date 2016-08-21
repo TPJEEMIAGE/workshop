@@ -1,19 +1,19 @@
 package org.workshop.entities.character;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.persistence.GeneratedValue;
 
 @Entity
 @XmlRootElement
-public class AttributeType {
+public class Damage {
 
 	@Id
 	@GeneratedValue
 	private Long id;
 	
-	private String name;
+	private String damageCalculation;
 
 	/**
 	 * @return the id
@@ -30,17 +30,18 @@ public class AttributeType {
 	}
 
 	/**
-	 * @return the name
+	 * @return the damageCalculation
 	 */
-	public String getName() {
-		return name;
+	public String getDamageCalculation() {
+		return damageCalculation;
 	}
 
 	/**
-	 * @param name the name to set
+	 * @param damageCalculation the damageCalculation to set
 	 */
-	public void setName(String name) {
-		this.name = name;
+	public void setDamageCalculation(String damageCalculation) {
+		this.damageCalculation = damageCalculation;
 	}
+	
 	
 }

@@ -35,7 +35,7 @@ public class SkillId implements Serializable{
 	 * @param skillTypeId the skillTypeId to set
 	 */
 	public void setSkillTypeId(Long skillTypeId) {
-		skillTypeId = skillTypeId;
+		this.skillTypeId = skillTypeId;
 	}
 	@Override
 	public int hashCode() {
