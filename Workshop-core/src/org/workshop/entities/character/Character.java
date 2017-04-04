@@ -56,8 +56,6 @@ public class Character {
 	@OneToMany
 	private List<Job> jobs;
 	
-	private Integer jobsSkillsPointRemaining;
-	
 	private Integer currentHp;
 	
 	private Integer currentMp;
@@ -304,20 +302,6 @@ public class Character {
 	 */
 	public void setJobs(List<Job> jobs) {
 		this.jobs = jobs;
-	}
-
-	/**
-	 * @return the jobsSkillsPointRemaining
-	 */
-	public Integer getJobsSkillsPointRemaining() {
-		return jobsSkillsPointRemaining;
-	}
-
-	/**
-	 * @param jobsSkillsPointRemaining the jobsSkillsPointRemaining to set
-	 */
-	public void setJobsSkillsPointRemaining(Integer jobsSkillsPointRemaining) {
-		this.jobsSkillsPointRemaining = jobsSkillsPointRemaining;
 	}
 
 	/**

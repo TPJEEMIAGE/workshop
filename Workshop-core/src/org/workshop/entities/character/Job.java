@@ -18,6 +18,8 @@ public class Job {
 	private JobType jobType;
 	
 	private Integer level;
+	
+	private Integer remainingPoints;
 
 	/**
 	 * @return the id
@@ -59,6 +61,14 @@ public class Job {
 	 */
 	public void setLevel(Integer level) {
 		this.level = level;
+	}
+
+	public Integer getRemainingPoints() {
+		return remainingPoints;
+	}
+
+	public void setRemainingPoints(Integer remainingPoints) {
+		this.remainingPoints = remainingPoints;
 	}
 
 }
