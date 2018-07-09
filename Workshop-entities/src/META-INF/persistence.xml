@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="Workshop-entities">
+	<jta-data-source>java:jboss/datasources/workshop</jta-data-source>
+		<class>org.entities.rpg.Aptitude</class>
+		<class>org.entities.rpg.Attribut</class>
+		<class>org.entities.rpg.Avoir</class>
+		<class>org.entities.rpg.AvoirPK</class>
+		<class>org.entities.rpg.Beneficier</class>
+		<class>org.entities.rpg.BeneficierPK</class>
+		<class>org.entities.rpg.CapableDe</class>
+		<class>org.entities.rpg.CapableDePK</class>
+		<class>org.entities.rpg.Capacite</class>
+		<class>org.entities.rpg.Classer</class>
+		<class>org.entities.rpg.ClasserPK</class>
+		<class>org.entities.rpg.Connaitre</class>
+		<class>org.entities.rpg.ConnaitrePK</class>
+		<class>org.entities.rpg.Contracter</class>
+		<class>org.entities.rpg.ContracterPK</class>
+		<class>org.entities.rpg.Element</class>
+		<class>org.entities.rpg.Emplacement</class>
+		<class>org.entities.rpg.Equiper</class>
+		<class>org.entities.rpg.EquiperPK</class>
+		<class>org.entities.rpg.EtreDe</class>
+		<class>org.entities.rpg.EtreDePK</class>
+		<class>org.entities.rpg.Invoquer</class>
+		<class>org.entities.rpg.InvoquerPK</class>
+		<class>org.entities.rpg.Job</class>
+		<class>org.entities.rpg.ListeEmplacement</class>
+		<class>org.entities.rpg.Noeud</class>
+		<class>org.entities.rpg.Objet</class>
+		<class>org.entities.rpg.Personnage</class>
+		<class>org.entities.rpg.Posseder</class>
+		<class>org.entities.rpg.PossederPK</class>
+		<class>org.entities.rpg.Resistance</class>
+		<class>org.entities.rpg.Resister</class>
+		<class>org.entities.rpg.ResisterPK</class>
+		<class>org.entities.rpg.Statut</class>
+		<class>org.entities.rpg.Subir</class>
+		<class>org.entities.rpg.SubirPK</class>
+		<class>org.entities.rpg.TypeAptitude</class>
 	</persistence-unit>
 </persistence>

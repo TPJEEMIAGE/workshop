@@ -4,8 +4,8 @@
 	<comment></comment>
 	<projects>
 		<project>Workshop-core</project>
-		<project>Workshop-ws</project>
 		<project>Workshop-entities</project>
+		<project>Workshop-ws</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
