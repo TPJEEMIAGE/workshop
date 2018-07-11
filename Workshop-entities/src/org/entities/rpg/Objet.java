@@ -51,18 +51,14 @@ public class Objet implements Serializable {
 	@Column(name="c_type")
 	private String type;
 
-	//bi-directional many-to-one association to Equiper
-	@OneToMany(mappedBy="TObjet")
-	private List<Equiper> TEquipers;
+	
 
 	//bi-directional many-to-one association to ListeEmplacement
 	@ManyToOne
 	@JoinColumn(name="c_liste_emplacement")
 	private ListeEmplacement TListeEmplacement;
 
-	//bi-directional many-to-one association to Posseder
-	@OneToMany(mappedBy="TObjet")
-	private List<Posseder> TPosseders;
+	
 
 	public Objet() {
 	}
@@ -155,27 +151,7 @@ public class Objet implements Serializable {
 		this.type = type;
 	}
 
-	public List<Equiper> getTEquipers() {
-		return this.TEquipers;
-	}
-
-	public void setTEquipers(List<Equiper> TEquipers) {
-		this.TEquipers = TEquipers;
-	}
-
-	public Equiper addTEquiper(Equiper TEquiper) {
-		getTEquipers().add(TEquiper);
-		TEquiper.setTObjet(this);
-
-		return TEquiper;
-	}
-
-	public Equiper removeTEquiper(Equiper TEquiper) {
-		getTEquipers().remove(TEquiper);
-		TEquiper.setTObjet(null);
-
-		return TEquiper;
-	}
+		
 
 	public ListeEmplacement getTListeEmplacement() {
 		return this.TListeEmplacement;
@@ -185,26 +161,6 @@ public class Objet implements Serializable {
 		this.TListeEmplacement = TListeEmplacement;
 	}
 
-	public List<Posseder> getTPosseders() {
-		return this.TPosseders;
-	}
-
-	public void setTPosseders(List<Posseder> TPosseders) {
-		this.TPosseders = TPosseders;
-	}
-
-	public Posseder addTPosseder(Posseder TPosseder) {
-		getTPosseders().add(TPosseder);
-		TPosseder.setTObjet(this);
-
-		return TPosseder;
-	}
-
-	public Posseder removeTPosseder(Posseder TPosseder) {
-		getTPosseders().remove(TPosseder);
-		TPosseder.setTObjet(null);
-
-		return TPosseder;
-	}
+		
 
 }
