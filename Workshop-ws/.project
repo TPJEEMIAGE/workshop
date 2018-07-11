@@ -3,7 +3,6 @@
 	<name>Workshop-ws</name>
 	<comment></comment>
 	<projects>
-		<project>Workshop-entities</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

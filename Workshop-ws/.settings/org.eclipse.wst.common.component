@@ -2,9 +2,6 @@
     <wb-module deploy-name="Workshop-ws">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <dependent-module archiveName="Workshop-entities.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Workshop-entities/Workshop-entities">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <property name="context-root" value="Workshop-ws"/>
         <property name="java-output-path" value="/Workshop-ws/build/classes"/>
     </wb-module>

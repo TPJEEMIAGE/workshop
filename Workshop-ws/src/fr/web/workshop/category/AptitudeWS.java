@@ -39,9 +39,19 @@ public class AptitudeWS {
 	@POST
 	@Path("/create")
 	@Consumes("application/json")
+	@Produces("application/json")
 	public Response saveAptitude(Aptitude apt){
 		aptService.saveAptitude(apt);
-		return Response.ok().build();
+		return Response.ok(apt).build();
+	}
+	
+	@POST
+	@Path("/delete")
+	@Consumes("application/json")
+	@Produces("application/json")
+	public Response deleteAptitude(Aptitude apt){
+		aptService.deleteAptitude(apt);
+		return Response.ok("Deleted").build();
 	}
 	
 	
